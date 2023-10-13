@@ -36,17 +36,17 @@ export default function Hero() {
             delay: 0.7,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          className="hidden md:flex flex-col justify-evenly items-center gap-1 absolute top-[12.25%] left-[5%] w-[38%] h-[72%] bg-stone-600 rounded-lg shadow-2xl px-3 bg-opacity-90 backdrop-blur-sm"
+          className="absolute top-0 h-full flex flex-col justify-around md:justify-evenly items-center gap-1 md:top-[12.25%] md:left-[5%] md:w-[38%] md:h-[72%] bg-stone-700 md:bg-stone-600 rounded-lg shadow-2xl px-3 bg-opacity-70 md:bg-opacity-90 md:backdrop-blur-sm"
         >
           <h1
             className={classNames(
               LogoFont.className,
-              "text-xs sm:text-2xl md:text-4xl lg:text-5xl px-5 font-bold text-emerald-600"
+              "text-4xl lg:text-5xl text-center md:text-left md:px-5 font-extrabold md:font-bold md:text-emerald-500 text-emerald-400"
             )}
           >
             Little Learners Need Your Help!
           </h1>
-          <h3 className="text-xs sm:text-xl md:text-2xl lg:text-3xl px-10 text-center font-semibold tracking-wider italic text-neutral-200">
+          <h3 className="text-2xl lg:text-3xl md:px-10 text-center font-semibold tracking-wider italic text-neutral-200">
             {`"Together we strive to empower people and transform lives through the
           power of education and cultural understanding."`}
           </h3>
