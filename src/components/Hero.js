@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Baloo_2 } from "next/font/google";
-import kids_tiles from "../../public/kids_tiles.png";
+import kids_tiles from "../../public/kids_tiles.jpg";
 
 const LogoFont = Baloo_2({
   subsets: ["latin"],
