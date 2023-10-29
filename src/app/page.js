@@ -29,7 +29,8 @@ export default function Home() {
             "text-4xl font-bold text-indigo-900"
           )}
         >
-          Every child deserves to have access to literacy!
+          Community Centered
+          Literacy projects!
         </h1>
         <p className="text-xl md:text-2xl w-full px-1.5 md:p-0 md:w-1/2 font-medium text-neutral-700">
           We are partnering with two schools in the city of San Francisco de
@@ -44,7 +45,7 @@ export default function Home() {
           className="object-cover w-11/12 md:w-[33%] md:h-[80%] rounded-3xl"
         />
         <div className="flex items-center md:items-start gap-7 mt-10 px-3 w-full md:w-1/2 flex-col md:gap-16">
-          <h1 className="text-4xl font-bold text-indigo-900">What we do!</h1>
+          <h1 className="text-4xl font-bold text-indigo-900">What we do</h1>
           <p className="text-2xl tracking-tighter sm:tracking-tight md:tracking-wider text-justify md:text-start leading-normal font-medium text-neutral-800">
             We support and strengthen community learning spaces, ensuring that
             everyone has the opportunity to read, learn and grow. We are
@@ -55,14 +56,14 @@ export default function Home() {
         </div>
       </div>
       <div className="via-stone-200 to-stone-300 from-stone-300 bg-gradient-to-b from-60% via-30% to-10% w-full flex flex-col h-[1500px]">
-        <ScrollCard className="h-full w-full rounded-3xl bg-teal-600 shadow-md">
+        <ScrollCard className="mt-10 h-full w-full rounded-3xl bg-teal-600 shadow-md">
           <div className="sticky top-0 flex px-4 pt-36 pb-20 flex-col md:pt-64 md:px-72 md:pb-52">
             <div className="gap-5 flex text-2xl text-white">
               <FaBookOpenReader />
               <h3>Humanity & Literacy</h3>
             </div>
             <h1 className="mt-7 text-4xl font-bold text-white">
-              Why Literacy Matters
+              Why Literacy
             </h1>
             <p className="text-3xl leading-snug mt-3 text-white">
               Literacy is crucial for education, employment, health, civic
@@ -97,7 +98,7 @@ export default function Home() {
           </div>
         </div> */}
         <h3 className="mt-16 text-4xl font-bold text-indigo-900">
-          Our Ultimate Approach
+          Our Approach
         </h3>
         <div className="mt-10 gap-7 flex flex-col md:content-start md:gap-4 lg:gap-10 md:flex-row">
           <div className="card overflow-visible relative p-2 flex flex-col items-center max-w-[392px] h-[488px] rounded-2xl bg-stone-100 hover:bg-white shadow-lg">

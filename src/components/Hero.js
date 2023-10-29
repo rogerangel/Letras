@@ -52,7 +52,7 @@ export default function Hero() {
             ease: [0, 0.71, 0.2, 1.01],
           }}
           // className="absolute top-0 h-full flex flex-col justify-around md:justify-evenly items-center gap-1 md:top-[12.25%] md:left-[5%] md:w-[38%] md:h-[72%] bg-stone-700 md:bg-stone-600 rounded-lg shadow-2xl px-3 bg-opacity-70 md:bg-opacity-90 md:backdrop-blur-sm"
-          className="absolute w-full top-0 h-full flex flex-col justify-around md:justify-evenly items-center bg-stone-900 shadow-2xl px-3 bg-opacity-70 md:bg-opacity-70"
+          className="absolute w-full top-0 h-full flex flex-col justify-around md:justify-evenly items-center bg-stone-900 shadow-2xl px-3 bg-opacity-70 md:bg-opacity-60"
         // className="h-full flex flex-col justify-around md:justify-evenly items-center bg-stone-900 shadow-2xl px-3 bg-opacity-70 md:bg-opacity-70"
         >
           <h1
