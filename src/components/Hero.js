@@ -4,6 +4,7 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Baloo_2 } from "next/font/google";
 import kids_tiles from "../../public/kids_tiles.jpg";
+import Link from "next/link";
 
 const LogoFont = Baloo_2({
   subsets: ["latin"],
@@ -68,9 +69,9 @@ export default function Hero() {
           power of education and cultural understanding."`}
           </h3>
           <div className="flex flex-row">
-            <button className="bg-amber-400 duration-300 rounded-full pt-4 pb-1 px-4 text-neutral-800 text-xl font-semibold hover:duration-300 hover:scale-110 hover:font-semibold hover:bg-amber-500 shadow-xl">
+            <Link href="/donate" className="bg-amber-400 duration-300 rounded-full pt-4 pb-1 px-4 text-neutral-800 text-xl font-semibold hover:duration-300 hover:scale-110 hover:font-semibold hover:bg-amber-500 shadow-xl">
               Donate Today!
-            </button>
+            </Link>
           </div>
         </motion.div>
       </AnimatePresence>
