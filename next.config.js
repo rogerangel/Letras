@@ -1,11 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  // basePath: "/letrasinc",
-  // images: {
-  //   loader: "custom",
-  //   loaderFile: "./my-loader.js",
-  // },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "leurys93.github.io",
+        port: "",
+        pathname: "/Letras-YLPDR-Img/**",
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

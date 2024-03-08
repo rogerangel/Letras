@@ -1,5 +1,5 @@
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
-// import { Inter } from "next/font/google";
 import { Baloo_Tammudu_2 } from "next/font/google";
 import NavigationBar from "@/components/NavigationBar";
 
@@ -19,16 +19,18 @@ export default function RootLayout({ children }) {
   const year = new Date().getFullYear();
   return (
     <html lang="en">
+      <SpeedInsights />
       <body
         className={classNames(
           balooT.className,
-          "antialiased text-gray-900 bg-gray-100 h-full"
+          "antialiased text-gray-900 bg-stone-300 h-full"
         )}
       >
         <NavigationBar />
         {children}
-        <footer className="bg-stone-300/90 backdrop-blur-sm">
-          <div className="flex flex-col items-center justify-center h-28">
+        <footer className="bg-stone-300">
+          {/* <div className="flex flex-col items-center justify-center h-28"> */}
+          <div className="flex flex-col items-center justify-center h-14">
             <p className="text-sm text-gray-600">{`© ${year} Letras Inc.`}</p>
           </div>
         </footer>

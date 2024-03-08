@@ -9,13 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-email/components": "0.0.14",
     "@stripe/react-stripe-js": "^2.4.0",
     "@stripe/stripe-js": "^2.2.1",
+    "@vercel/speed-insights": "^1.0.9",
     "framer-motion": "^10.16.4",
     "next": "^14.0.4",
+    "popmotion": "^11.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-email": "2.0.0",
     "react-icons": "^4.11.0",
+    "react-player": "^2.14.1",
+    "react-social-media-embed": "^2.4.1",
+    "resend": "^3.1.0",
     "sharp": "^0.32.6",
     "stripe": "^14.8.0"
   },
@@ -24,6 +31,8 @@
     "eslint": "latest",
     "eslint-config-next": "^14.0.4",
     "postcss": "latest",
+    "prettier": "^3.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.9",
     "tailwindcss": "latest"
   }
 }

@@ -6,23 +6,26 @@ import {
   useStripe,
   useElements,
 } from "@stripe/react-stripe-js";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function CheckoutForm() {
+  const router = useRouter();
   const stripe = useStripe();
   const elements = useElements();
 
-  const [email, setEmail] = useState("");
   const [message, setMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+
+  const searchParams = useSearchParams();
 
   useEffect(() => {
     if (!stripe) {
       return;
     }
 
-    const clientSecret = new URLSearchParams(window.location.search).get(
-      "payment_intent_client_secret"
-    );
+    const clientSecret = searchParams.has("payment_intent_client_secret")
+      ? searchParams.get("payment_intent_client_secret")
+      : null;
 
     if (!clientSecret) {
       return;
@@ -32,6 +35,7 @@ export default function CheckoutForm() {
       switch (paymentIntent.status) {
         case "succeeded":
           setMessage("Payment succeeded!");
+          router.replace("/donate/confirmation");
           break;
         case "processing":
           setMessage("Your payment is processing.");
@@ -44,7 +48,7 @@ export default function CheckoutForm() {
           break;
       }
     });
-  }, [stripe]);
+  }, [stripe, searchParams, router]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -61,8 +65,9 @@ export default function CheckoutForm() {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: "http://localhost:3000/donate",
-        receipt_email: email,
+        return_url: `${
+          process.env.NEXT_PUBLIC_DOMAIN
+        }?amount=${searchParams.get("amount")}`,
       },
     });
 
@@ -81,33 +86,35 @@ export default function CheckoutForm() {
   };
 
   const paymentElementOptions = {
-    layout: "tabs",
+    layout: "auto",
   };
 
   return (
-    <form id="payment-form" onSubmit={handleSubmit}>
-      <input
-        id="email"
-        type="text"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Enter email address"
-        className="mb-3 border-2 p-2 rounded-md shadow-sm w-full text-md"
-      />
-      <PaymentElement id="payment-element" options={paymentElementOptions} />
-      <button
-        disabled={isLoading || !stripe || !elements}
-        id="submit"
-        className="bg-amber-400 mt-5 pt-4 pb-1 px-11 rounded-2xl font-medium text-2xl hover:duration-300 duration-300 hover:scale-95 text-neutral-700 hover:bg-green-600 hover:text-white shadow-lg"
-      >
-        {isLoading ? (
-          <div className="spinner" id="spinner"></div>
-        ) : (
-          "Complete Your Donation"
-        )}
-      </button>
-      {/* Show any error or success messages */}
-      {message && <div id="payment-message">{message}</div>}
-    </form>
+    <div className="xl:px-10">
+      <h1 className="mb-5 text-center text-4xl font-bold text-zinc-700">
+        Finalize Contribution
+      </h1>
+      <p className="mb-5 text-center text-lg font-semibold text-zinc-700">
+        ${searchParams.get("amount")}.00 will be charged to your card.
+      </p>
+      <form id="payment-form" onSubmit={handleSubmit}>
+        <PaymentElement id="payment-element" options={paymentElementOptions} />
+        <button
+          disabled={isLoading || !stripe || !elements}
+          id="submit"
+          className="mt-5 w-full rounded-2xl bg-amber-400 px-11 pb-1 pt-4 text-2xl font-medium text-neutral-700 shadow-lg duration-300 hover:scale-95 hover:bg-green-600 hover:text-white hover:duration-300"
+        >
+          {isLoading ? (
+            <div className="spinner animate-pulse" id="spinner">
+              Loading...
+            </div>
+          ) : (
+            "Complete Your Donation"
+          )}
+        </button>
+        {/* Show any error or success messages */}
+        {message && <div id="payment-message">{message}</div>}
+      </form>
+    </div>
   );
 }
