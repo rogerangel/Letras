@@ -123,11 +123,11 @@ export default function ImageCarousel({ images, captions }) {
           </p>
         </div>
         <div className="absolute bottom-2 z-10 flex items-center justify-center space-x-2">
-          {images.map((_, i) => (
+          {Object.values(images).map((_, i) => (
             <div
               key={i}
               className={`h-2 w-2 cursor-pointer rounded-full bg-gray-800/50 ${
-                imageIndex === i ? "bg-gray-50/100" : ""
+                i === imageIndex ? "bg-white" : ""
               }`}
               onClick={() => setPage([i, i - page])}
             />

@@ -149,6 +149,7 @@ export default function CardArticles({ projects }) {
                               width={image.props.width}
                               height={image.props.height}
                               className={image.props.className}
+                              // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             />
                             <p className="pt-1 text-sm font-semibold text-gray-500">
                               {image.caption}

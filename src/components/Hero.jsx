@@ -58,7 +58,6 @@ export default function Hero({ children }) {
           src={kids_tiles}
           alt="Tiles of kids reading"
           className="img h-auto min-h-[550px] w-full object-cover"
-          priority={true}
         />
       </motion.div>
       <AnimatePresence>

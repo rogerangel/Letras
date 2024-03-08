@@ -57,7 +57,7 @@ export default function ContactUsForm({
               <span className="text-red-500">*</span>
             </label>
             <input
-              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 font-mono text-xl text-gray-900 shadow-inner focus:border-blue-500 focus:ring-blue-500"
+              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 font-sans text-lg text-gray-900 shadow-inner focus:border-blue-500 focus:ring-blue-500"
               type="text"
               id="f_name"
               name="f_name"
@@ -74,7 +74,7 @@ export default function ContactUsForm({
               <span className="text-red-500">*</span>
             </label>
             <input
-              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 font-mono text-xl text-gray-900 shadow-inner focus:border-blue-500 focus:ring-blue-500"
+              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 font-sans text-lg text-gray-900 shadow-inner focus:border-blue-500 focus:ring-blue-500"
               type="text"
               id="l_name"
               name="l_name"
@@ -93,7 +93,7 @@ export default function ContactUsForm({
               <span className="text-red-500">*</span>
             </label>
             <input
-              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 font-mono text-xl text-gray-900 shadow-inner focus:border-blue-500 focus:ring-blue-500"
+              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 font-sans text-lg text-gray-900 shadow-inner focus:border-blue-500 focus:ring-blue-500"
               type="email"
               id="email"
               name="email"
@@ -110,7 +110,7 @@ export default function ContactUsForm({
               <i className="text-xs text-gray-500">(optional)</i>
             </label>
             <input
-              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 font-mono text-xl text-gray-900 shadow-inner focus:border-blue-500 focus:ring-blue-500"
+              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 font-sans text-lg text-gray-900 shadow-inner focus:border-blue-500 focus:ring-blue-500"
               type="text"
               id="telephone"
               name="telephone"
